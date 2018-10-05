@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+		
+		body{
+			background-color: black;
+		}
+		h1{
+			color: orange;
+		}
+		p{
+			color:gray;
+		}
