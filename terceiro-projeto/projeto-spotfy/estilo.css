@@ -1,5 +1,6 @@
 html, body, .capa {
 	height: 100%;
+	overflow: auto;
 }
 body {
 	background: url("imagens/capa.png"),
@@ -54,8 +55,6 @@ nav.navbar-transparente {
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
 	-moz-border-radius: 500px;
-	padding: 10px 35px;
-	margin: 0px 15px;
 	text-transform: uppercase;
 	transition: background 0.4s, color 0.4s;
 }
@@ -101,10 +100,32 @@ footer {
 	float: right;
 }
 h1 {
-	font-size: 100px;
 	font-weight: 900;
 	letter-spacing: -0.05em;
 	margin-bottom: 50px;
+}
+@media screen and (max-width: 767px){
+	h1 {
+		font-size: 50px;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+}
+@media screen and (min-width:768px){
+	h1 {
+		font-size: 70px;
+	}
+}
+@media screen and (min-width:992px){
+	h1 {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width:1200px){
+	h1 {
+		font-size: 100px;
+	}
 }
 h2 {
 	font-size: 50px;
