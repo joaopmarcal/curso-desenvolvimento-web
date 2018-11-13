@@ -9,10 +9,21 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 		<!-- jquery -->
-		<script src="jquery-2.2.0.js"></script>
+		<script src="js/jquery-3.3.1.js"></script>
 
 		<script type="text/javascript">
-			//incluir a codificação javascript aqui
+			function exibeElementoPorTag(tag){
+				$(tag).show();
+			}
+			function ocultaElementoPorTag(tag){
+				$(tag).hide();	
+			}
+			function exibeElementoPorClasse(classe){
+				$('.'+classe).show();
+			}
+			function ocultaElementoPorClasse(classe){
+				$('.'+classe).hide();	
+			}			
 		</script>
 	</head>
 
@@ -44,8 +55,8 @@
 				</div>
 
 				<div class="col-md-4">
-					<div style="height: 100px; width: 100px; background:#428bca;" class="pull-left"></div>
-					<div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="pull-left"></div>
+					<div style="height: 100px; width: 100px; background:#428bca;" class="div_2 pull-left"></div>
+					<div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="div_2 pull-left"></div>
 				</div>
 
 				<div class="col-md-4">
@@ -58,18 +69,18 @@
 
 			<div class="row">
 				<div class="col-md-4">
-					<button type="button" class="btn btn-danger" onclick="">Esconder parágrafos</button>
-					<button type="button" class="btn btn-success" onclick="">Exibir parágrafos</button>
+					<button type="button" class="btn btn-danger" onclick="ocultaElementoPorTag('p')">Esconder parágrafos</button>
+					<button type="button" class="btn btn-success" onclick="exibeElementoPorTag('p')">Exibir parágrafos</button>
 				</div>
 
 				<div class="col-md-4">
-					<button type="button" class="btn btn-danger">Esconder divs</button>
-					<button type="button" class="btn btn-success">Exibir divs</button>
+					<button type="button" class="btn btn-danger" onclick="ocultaElementoPorClasse('div_2')">Esconder divs</button>
+					<button type="button" class="btn btn-success" onclick="exibeElementoPorClasse('div_2')">Exibir divs</button>
 				</div>
 
 				<div class="col-md-4">
-					<button type="button" class="btn btn-danger">Esconder inputs</button>
-					<button type="button" class="btn btn-success">Exibir inputs</button>
+					<button type="button" class="btn btn-danger" onclick="ocultaElementoPorTag('input')">Esconder inputs</button>
+					<button type="button" class="btn btn-success" onclick="exibeElementoPorTag('input')">Exibir inputs</button>
 				</div>
 
 			</div>
