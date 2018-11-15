@@ -11,7 +11,7 @@
 			echo 'Teste de impressão';
 		?>
 		<br>
-		<?='teste tag impressão';?>
+		<?= 'teste tag impressão';?>
 		<? echo 'Teste Tag Curta'; ?>
 		<br>
 		<?php /*?>// tag descontinuada não funciona em php 7.<?php */?>
