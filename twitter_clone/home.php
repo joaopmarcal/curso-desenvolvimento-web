@@ -18,7 +18,17 @@ if(!isset($_SESSION['usuario'])){
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//associar o evento de click ao botão
+				$('#btn_tweet').click( function(){
+					if($('#texto_tweet').val().length > 0){
+						alert('Campo está preenchido');
+					}
+				});
+			});
+		</script>
 	</head>
 
 	<body>
@@ -71,9 +81,9 @@ if(!isset($_SESSION['usuario'])){
 	    		<div class="panel panel-default">
 	    			<div class="panel-body">
 	    				<div class="input-group">
-	    					<input type="text" class="form-control" placeholder="O que está acontecendo agora?" maxlenght="140">
+	    					<input type="text" id="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlenght="140">
 	    					<span class="input-group-btn">
-	    						<button class="btn btn-default" type="button">
+	    						<button class="btn btn-default" id="btn_tweet" type="button">
 	    							Tweet
 	    						</button>
 	    					</span>
