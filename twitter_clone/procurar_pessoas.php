@@ -42,7 +42,7 @@ if(!isset($_SESSION['usuario'])){
 									});
 								});
 								
-								$('.btn_deixar_seguir').click(function(){
+								$('.btn_deixar_seguir').click( function(){
 									var id_usuario = $(this).data('id_usuario');
 									$.ajax({
 										url: 'deixar_seguir.php',
@@ -51,6 +51,7 @@ if(!isset($_SESSION['usuario'])){
 										success: function(data){
 											alert('registro removido com sucesso');
 										}
+								});
 								});
 								
 							}
