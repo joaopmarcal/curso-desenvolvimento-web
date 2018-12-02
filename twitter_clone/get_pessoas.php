@@ -7,8 +7,10 @@
 	require_once('db.class.php');
 	$nome_pessoa = $_POST['nome_pessoa'];
 	$id_usuario = $_SESSION['id_usuario'];
+
 	$objDb = new db();
 	$link = $objDb->conecta_mysql();
+
 	$sql = " SELECT u.*,us.* from usuarios AS u LEFT JOIN usuarios_seguidores AS us ON (us.id_usuario = $id_usuario AND u.id = us.seguindo_id_usuario) WHERE u.usuario like '%$nome_pessoa%' AND u.id <> $id_usuario ";
 
 	$resultado_id = mysqli_query($link,$sql);
